@@ -11,7 +11,21 @@ The implementation, on the other hand, can&amp;rsquo;t know the details of the c
 So this allows use to create modular, reusable libraries of algorithms and data structure that we can use to build more complicated algorithms and data structures.&lt;/li>
 &lt;/ul>
 &lt;h3 id="stacks">stacks&lt;/h3>
-&lt;p>&lt;img alt="Pasted image 20250117152755.png" loading="lazy" src="https://qingzhiliangcheng.github.io/images/Pasted%20image%2020250117152755.png">&lt;/p></description></item><item><title>UNION-FIND</title><link>https://qingzhiliangcheng.github.io/posts/union-find/</link><pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate><guid>https://qingzhiliangcheng.github.io/posts/union-find/</guid><description>&lt;h3 id="dynamic-connectivity">dynamic connectivity&lt;/h3>
+&lt;p>&lt;img alt="Pasted image 20250117152755.png" loading="lazy" src="https://qingzhiliangcheng.github.io/images/Pasted%20image%2020250117152755.png">&lt;/p></description></item><item><title>Analysis of Algorithm</title><link>https://qingzhiliangcheng.github.io/posts/analysis-of-algorithm/</link><pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate><guid>https://qingzhiliangcheng.github.io/posts/analysis-of-algorithm/</guid><description>&lt;p>the first step is to be able to make some observations about the running.&lt;/p>
+&lt;p>for example 3-Sum problem
+Give N distinct integers, how many triples sum to exactly zero?
+&lt;figure>
+&lt;img loading="lazy" src="https://qingzhiliangcheng.github.io/images/Pasted%20image%2020250116122930.png" width="500"/>
+&lt;/figure>
+&lt;figure>
+&lt;img loading="lazy" src="https://qingzhiliangcheng.github.io/images/Pasted%20image%2020250116123024.png" width="500"/>
+&lt;/figure>
+So that&amp;rsquo;s a brute force algorithm that is a fine method for solving 3-Sum problem, now what we&amp;rsquo;re interested in is how much time does this take as a function of n?
+the frist function is use a clock and java have a stopwatch class in the standard library.
+&lt;figure>
+&lt;img loading="lazy" src="https://qingzhiliangcheng.github.io/images/Pasted%20image%2020250116123402.png" width="200"/>
+&lt;/figure>
+&lt;/p></description></item><item><title>UNION-FIND</title><link>https://qingzhiliangcheng.github.io/posts/union-find/</link><pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate><guid>https://qingzhiliangcheng.github.io/posts/union-find/</guid><description>&lt;h3 id="dynamic-connectivity">dynamic connectivity&lt;/h3>
 &lt;p>union find problem&amp;mdash;- a set of algorithms for solving the so-called dynamic connectivity problem.&lt;/p>
 &lt;ul>
 &lt;li>Quick Find&lt;/li>
