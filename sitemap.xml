@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://qingzhiliangcheng.github.io/categories/</loc>
-  </url><url>
-    <loc>https://qingzhiliangcheng.github.io/posts/</loc>
-  </url><url>
-    <loc>https://qingzhiliangcheng.github.io/</loc>
-  </url><url>
-    <loc>https://qingzhiliangcheng.github.io/tags/</loc>
-  </url><url>
-    <loc>https://qingzhiliangcheng.github.io/posts/welcome/</loc>
-  </url>
-</urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://qingzhiliangcheng.github.io/posts/bags-queres-and-stacks/</loc></url><url><loc>https://qingzhiliangcheng.github.io/categories/</loc></url><url><loc>https://qingzhiliangcheng.github.io/posts/</loc></url><url><loc>https://qingzhiliangcheng.github.io/</loc></url><url><loc>https://qingzhiliangcheng.github.io/tags/</loc></url><url><loc>https://qingzhiliangcheng.github.io/posts/union-find/</loc></url><url><loc>https://qingzhiliangcheng.github.io/posts/welcome/</loc></url></urlset>

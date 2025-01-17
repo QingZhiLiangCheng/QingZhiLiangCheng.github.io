@@ -1,18 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Posts on QingZhiLiangCheng🍊</title>
-    <link>https://qingzhiliangcheng.github.io/posts/</link>
-    <description>Recent content in Posts on QingZhiLiangCheng🍊</description>
-    <generator>Hugo -- 0.140.2</generator>
-    <language>zh-CN</language>
-    <atom:link href="https://qingzhiliangcheng.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Welcome to QingZhiLiangCheng🍊&#39;s home </title>
-      <link>https://qingzhiliangcheng.github.io/posts/welcome/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://qingzhiliangcheng.github.io/posts/welcome/</guid>
-      <description>&lt;p&gt;顺颂时祺，秋绥冬喜&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on QingZhiLiangCheng🍊</title><link>https://qingzhiliangcheng.github.io/posts/</link><description>Recent content in Posts on QingZhiLiangCheng🍊</description><generator>Hugo -- 0.141.0</generator><language>zh-CN</language><atom:link href="https://qingzhiliangcheng.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>BAGS, QUERES, AND STACKS</title><link>https://qingzhiliangcheng.github.io/posts/bags-queres-and-stacks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://qingzhiliangcheng.github.io/posts/bags-queres-and-stacks/</guid><description>&lt;h3 id="stacks-and-queue-introduce">stacks and queue introduce&lt;/h3>
+&lt;p>the stack and queue, differ in the way in which the item to be removed is chosen.&lt;/p>
+&lt;ul>
+&lt;li>stack LIFO&lt;/li>
+&lt;li>queue FIFO
+&lt;img alt="Pasted image 20250117151739.png" loading="lazy" src="https://qingzhiliangcheng.github.io/images/Pasted%20image%2020250117151739.png">
+Our sub text today is all about modular programming.
+The idea is to completely separate the interface and the implementation.
+So when we have these types of data structures and data types that are precisely defined, like stacks and queues ans so forth, what we weant to do is completely separate the details of the implementation form the client. The client can have many different implementations from which to choose, but the client code should only perform the basic operations.
+The implementation, on the other hand, can&amp;rsquo;t know the details of the client needs. All it&amp;rsquo;s supposed to do is implement those operations.In other way, many clients can reuse the same implementation.
+So this allows use to create modular, reusable libraries of algorithms and data structure that we can use to build more complicated algorithms and data structures.&lt;/li>
+&lt;/ul>
+&lt;h3 id="stacks">stacks&lt;/h3>
+&lt;p>&lt;img alt="Pasted image 20250117152755.png" loading="lazy" src="https://qingzhiliangcheng.github.io/images/Pasted%20image%2020250117152755.png">&lt;/p></description></item><item><title>UNION-FIND</title><link>https://qingzhiliangcheng.github.io/posts/union-find/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://qingzhiliangcheng.github.io/posts/union-find/</guid><description>&lt;h3 id="dynamic-connectivity">dynamic connectivity&lt;/h3>
+&lt;p>union find problem&amp;mdash;- a set of algorithms for solving the so-called dynamic connectivity problem.&lt;/p>
+&lt;ul>
+&lt;li>Quick Find&lt;/li>
+&lt;li>Quick Union&lt;/li>
+&lt;/ul>
+&lt;p>the steps that we&amp;rsquo;ll develop a useful algorithm.&lt;/p>
+&lt;p>The first steps is to model the problem.
+try to understand what are the main elements of the problem that need to be solved. Then we will find some algorithm to solve the problems. But in many cases,the first algorithm we come up with would be fast enough and maybe it fits in memory, we will go ahead and use it.
+but in many other cases maybe it&amp;rsquo;s not fast enough,or there&amp;rsquo;s not enough memory. we should do it try to figure out why,find a way to address whatever&amp;rsquo;s causing the problem,find a new algorithm and iterate until we&amp;rsquo;re satisfied.&lt;/p></description></item><item><title>Welcome to QingZhiLiangCheng🍊's home</title><link>https://qingzhiliangcheng.github.io/posts/welcome/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://qingzhiliangcheng.github.io/posts/welcome/</guid><description>&lt;p>顺颂时祺，秋绥冬喜&lt;/p></description></item></channel></rss>
