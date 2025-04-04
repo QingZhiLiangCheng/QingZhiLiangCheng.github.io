@@ -7,4 +7,74 @@ br {
     display: block; /* 将图片设置为块级元素 */
     margin: auto;   /* 水平居中 */
   }
+
+
+img {
+  display: block;
+  margin: auto;
+}
+br {
+    content: ""; /* 添加伪内容 */
+    display: block;
+    margin-bottom: 20px; /* 设置间距 */
+  }
+
+body {
+  font-size: 18px; /* 全局字体大小 */
+  background-color: #f8f9fa;
+  font-family: 'LXGW WenKai', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  line-height: 1.8;
+  color: #333;
+  margin: 0;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+
+  .content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow-wrap: break-word;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 0 0 1.5em 0;
+      letter-spacing: 0.02em;
+    }
+
+    ul {
+      padding-left: 1.8rem;
+
+      li {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        line-height: 1.8;
+
+        &::marker {
+          color: #3498db;
+        }
+      }
+    }
+
+    pre code {
+      font-size: 16px;
+      line-height: 1.5;
+      display: block;
+      white-space: pre-wrap;
+    }
+
   :root body{--line-width:min(40em, calc(100vw - 2em));--line-width-adaptive:min(40em, calc(100vw - 2em));--file-line-width:min(40em, calc(100vw - 2em));--sidebar-width:min(20em, 80vw)}body{--zoom-factor:1!important;--accent-h:39!important;--accent-s:100%!important;--accent-l:50%!important;--text-on-accent:var(--text-on-accent-inverted)!important;--font-text-size:17px!important;--indent-size:4!important;--cmdr-spacing:8px!important;--at-button-height:48px!important;--at-button-width:48px!important;--at-row-count:1!important;--at-spacing:0px!important;--at-offset:0px}
