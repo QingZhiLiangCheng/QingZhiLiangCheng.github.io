@@ -1,26 +1,16 @@
-br {
-    content: ""; /* 添加伪内容 */
-    display: block;
-    margin-bottom: 20px; /* 设置间距 */
-  }
-  img {
-    display: block; /* 将图片设置为块级元素 */
-    margin: auto;   /* 水平居中 */
-  }
-
-
 img {
   display: block;
   margin: auto;
 }
+
 br {
-    content: ""; /* 添加伪内容 */
-    display: block;
-    margin-bottom: 20px; /* 设置间距 */
-  }
+  content: ""; /* 添加伪内容 */
+  display: block;
+  margin-bottom: 20px; /* 设置间距 */
+}
 
 body {
-  font-size: 18px; /* 全局字体大小 */
+  font-size: 1rem; /* 全局字体大小，基于根元素默认字体大小（通常是16px） */
   background-color: #f8f9fa;
   font-family: 'LXGW WenKai', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   line-height: 1.8;
@@ -28,53 +18,197 @@ body {
   margin: 0;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
+}
 
-  .content {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    overflow-wrap: break-word;
+.content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow-wrap: break-word;
 
-    h1 {
-      font-size: 2.5rem;
-    }
+  h1 {
+    font-size: 2.5rem;
+  }
 
-    h2 {
-      font-size: 2rem;
-    }
+  h2 {
+    font-size: 2rem;
+  }
 
-    h3 {
-      font-size: 1.75rem;
-    }
+  h3 {
+    font-size: 1.75rem;
+  }
 
-    p {
+  p {
+    font-size: 1.1rem;
+    margin: 0 0 1.5em 0;
+    letter-spacing: 0.02em;
+  }
+
+  ul {
+    padding-left: 1.8rem;
+
+    li {
       font-size: 1.1rem;
-      margin: 0 0 1.5em 0;
-      letter-spacing: 0.02em;
-    }
+      margin-bottom: 1rem;
+      line-height: 1.8;
 
-    ul {
-      padding-left: 1.8rem;
-
-      li {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-        line-height: 1.8;
-
-        &::marker {
-          color: #3498db;
-        }
+      &::marker {
+        color: #3498db;
       }
     }
+  }
+}
 
-    pre code {
-      font-size: 16px;
-      line-height: 1.5;
-      display: block;
-      white-space: pre-wrap;
-    }
 
-  :root body{--line-width:min(40em, calc(100vw - 2em));--line-width-adaptive:min(40em, calc(100vw - 2em));--file-line-width:min(40em, calc(100vw - 2em));--sidebar-width:min(20em, 80vw)}body{--zoom-factor:1!important;--accent-h:39!important;--accent-s:100%!important;--accent-l:50%!important;--text-on-accent:var(--text-on-accent-inverted)!important;--font-text-size:17px!important;--indent-size:4!important;--cmdr-spacing:8px!important;--at-button-height:48px!important;--at-button-width:48px!important;--at-row-count:1!important;--at-spacing:0px!important;--at-offset:0px}}}
+/*
+@Author   : 咖啡豆
+@contact  : https://obsidian.vip/
+@File     : coffeebean-补充图片对齐语法.css
+@Software : vscode
+@Date     : 2023-02-13 17:53:32
+@upDate   : 2023-02-13 17:53:37
+@Desc     : 强制增加图片对齐语法
+            在md文件中，图片的对齐语法是：![[Pasted image 20221125235721.png#pic_center|500]]
+*/
+
+/* 正则匹配，如果图片的链接中包含 #pic_center 的，图片居中显示 */.markdown-preview-view .image-embed[src*="#pic_center"] {
+                                                                 display: block;
+                                                                 margin-left: auto;
+                                                                 margin-right: auto;
+                                                                 width: 50%;
+                                                               }
+
+/* 正则匹配，如果图片的链接中包含 #pic_left 的，图片居左显示 */.markdown-preview-view .image-embed[src*="#pic_left"] {
+                                                               display: block;
+                                                               margin-left: 0;
+                                                               margin-right: auto;
+                                                               width: 50%;
+                                                             }
+
+/* 正则匹配，如果图片的链接中包含 #pic_right 的，图片居右显示 */.markdown-preview-view .image-embed[src*="#pic_right"] {
+                                                                display: block;
+                                                                margin-left: auto;
+                                                                margin-right: 0;
+                                                                width: 50%;
+                                                              }
+
+/*实时编辑模式，如果图片的链接中包含 #pic_center 的，图片居中显示*/
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="center"] {
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 50%;
+}
+
+/*实时编辑模式，如果图片的链接中包含 #pic_left 的，图片居左显示*/
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="left"] {
+  display: block;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  width: 50%;
+}
+
+/*实时编辑模式，如果图片的链接中包含 #pic_right 的，图片居右显示*/
+.markdown-source-view.mod-cm6.is-live-preview .image-embed[src$="right"] {
+  display: block;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  width: 50%;
+}
+
+
+/* 编辑模式下的行间距和段间距 */
+.cm-s-obsidian .cm-line {
+  line-height: 1.8; /* 行间距调整为1.7 */
+  padding-top: 1.25em; /* 段首间距调整为0.75em */
+  padding-bottom: 1.25em; /* 段尾间距调整为0.75em */
+}
+
+/* 编辑模式下非段落元素（如列表）的行间距 */
+.cm-s-obsidian .CodeMirror-line:not(.CodeMirror-line-wrapping) {
+  padding-bottom: 0.75em; /* 如果您希望这里有间距的话 */
+}
+
+/* 调整编辑模式下列表的间距，使其与预览模式类似 */
+.cm-s-obsidian .CodeMirror-line.CodeMirror-line-wrapping {
+  padding-top: 0.3em; /* 列表项之间的间距，根据需求调整 */
+  padding-bottom: 0.3em; /* 列表项之间的间距，根据需求调整 */
+}
+
+/* 编辑模式下调整标题后内容的上间距 */
+:root {
+  --header-bottom-spacing: 0.25em; /* 根据需要调整这个值 */
+}
+
+.cm-s-obsidian .cm-line.HyperMD-header {
+  padding-bottom: var(--header-bottom-spacing) ; /* 使用 !important 确保样式覆盖 */
+}
+
+.cm-s-obsidian .cm-line.HyperMD-header + .cm-line:not(.HyperMD-header):not(:has(>br:only-child)) {
+  padding-top: var(--header-bottom-spacing) ; /* 使用 !important 确保样式覆盖 */
+}
+
+
+
+/* 预览模式下的段落行间距和段间距 */
+.markdown-preview-view p br {
+  line-height: 1.7; /* 行间距保持一致 */
+  margin-top: 0.75em; /* 段首间距保持一致 */
+  margin-bottom: 0.75em; /* 段尾间距保持一致 */
+}
+
+/* 预览模式下列表项的行间距和段间距 */
+.markdown-preview-view ul li,
+.markdown-preview-view ol li {
+  line-height: 1.7; /* 行间距保持一致 */
+  margin-top: 0.2em; /* 列表项之间的间距保持一致 */
+  margin-bottom: 0.2em; /* 列表项之间的间距保持一致 */
+}
+
+/* 预览模式下一级列表的整体边距 */
+.markdown-preview-view  ul,
+.markdown-preview-view  ol {
+  margin-top: 0.75em; /* 一级列表与文本之间的间距保持一致 */
+  margin-bottom: 0.75em; /* 一级列表与文本之间的间距保持一致 */
+}
+
+/* 预览模式下嵌套列表的间距调整 */
+.markdown-preview-view ul ul,
+.markdown-preview-view ul ol,
+.markdown-preview-view ol ul,
+.markdown-preview-view ol ol {
+  margin-top: 0.2em; /* 嵌套列表与上级列表项之间的间距保持一致 */
+  margin-bottom: 0.2em; /* 嵌套列表与上级列表项之间的间距保持一致 */
+}
+
+.markdown-preview-section>div>p>br{
+  content: "";
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+:root body {
+  --line-width: min(40em, calc(100vw - 2em));
+  --line-width-adaptive: min(40em, calc(100vw - 2em));
+  --file-line-width: min(40em, calc(100vw - 2em));
+  --sidebar-width: min(20em, 80vw)
+}
+
+body {
+  --zoom-factor: 1 !important;
+  --accent-h: 39 !important;
+  --accent-s: 100% !important;
+  --accent-l: 50% !important;
+  --text-on-accent: var(--text-on-accent-inverted) !important;
+  --font-text-size: 17px !important;
+  --indent-size: 4 !important;
+  --cmdr-spacing: 8px !important;
+  --at-button-height: 48px !important;
+  --at-button-width: 48px !important;
+  --at-row-count: 1 !important;
+  --at-spacing: 0px !important;
+  --at-offset: 0px
+}
