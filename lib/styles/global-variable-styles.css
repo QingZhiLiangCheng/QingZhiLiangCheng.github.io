@@ -2,9 +2,45 @@ img {
     display: block;
     margin: auto;
 }
+
 br {
     content: ""; /* 添加伪内容 */
     display: block;
     margin-bottom: 20px; /* 设置间距 */
 }
-:root body{--line-width:min(40em, calc(100vw - 2em));--line-width-adaptive:min(40em, calc(100vw - 2em));--file-line-width:min(40em, calc(100vw - 2em));--sidebar-width:min(20em, 80vw)}body{--zoom-factor:1!important;--font-text-size:17px!important;--indent-size:4!important;--cmdr-spacing:8px!important;--at-button-height:48px!important;--at-button-width:48px!important;--at-row-count:1!important;--at-spacing:0px!important;--at-offset:0px}
+
+:root {
+    --background-primary: rgb(32, 31, 31);
+    --background-secondary: rgb(57, 56, 56);
+    --text-normal: #dcddde;
+    --text-accent: rgb(97, 186, 245);
+    --file-margins: 32px;
+
+    --callout-border-width: 0px;
+    --callout-border-opacity: 0.25;
+    --callout-padding: 12px 12px 12px 24px;
+    --callout-radius: 4px;
+    --callout-blend-mode: lighten;
+    --callout-title-padding: 0;
+    --callout-title-size: inherit;
+    --callout-content-padding: 0;
+}
+
+:root body {
+    --line-width: min(40em, calc(100vw - 2em));
+    --line-width-adaptive: min(40em, calc(100vw - 2em));
+    --file-line-width: min(40em, calc(100vw - 2em));
+    --sidebar-width: min(20em, 80vw)
+}
+
+body {
+    --zoom-factor: 1 !important;
+    --font-text-size: 18px !important;
+    --indent-size: 4 !important;
+    --cmdr-spacing: 8px !important;
+    --at-button-height: 48px !important;
+    --at-button-width: 48px !important;
+    --at-row-count: 1 !important;
+    --at-spacing: 0px !important;
+    --at-offset: 0px
+}
