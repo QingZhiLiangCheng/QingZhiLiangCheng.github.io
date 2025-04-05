@@ -8,7 +8,9 @@ br {
     display: block;
     margin-bottom: 20px; /* 设置间距 */
 }
-
+.scroll-indicator {
+    display: none; /* 隐藏可能引起下滑条的元素 */
+}
 
 :root {
     --background-primary: rgb(32, 31, 31);
