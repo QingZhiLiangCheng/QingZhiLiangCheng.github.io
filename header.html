@@ -11,18 +11,15 @@
 <style>
     .navbar {
         background-color: var(--background-secondary);
-        position: fixed; /* 改为 fixed 定位 */
-        top: 0; /* 固定在页面顶部 */
-        width: 100%; /* 占据整个宽度 */
+        position: absolute;
+        width: 100%;
+        top: 0;
         left: 0;
         right: 0;
-        z-index: 3; /* 确保层级高于其他内容 */
+        z-index: 3;
         padding-left: var(--file-margins);
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        /* 添加阴影效果 */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影向下偏移 */
     }
 </style>
