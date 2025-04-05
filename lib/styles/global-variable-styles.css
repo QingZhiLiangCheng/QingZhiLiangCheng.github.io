@@ -8,6 +8,9 @@ br {
     display: block;
     margin-bottom: 20px; /* 设置间距 */
 }
+.markdown-preview-sizer{
+    margin-top: 20px;
+}
 .scroll-indicator {
     display: none; /* 隐藏可能引起下滑条的元素 */
 }
