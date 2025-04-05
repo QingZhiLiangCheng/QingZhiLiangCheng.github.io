@@ -9,17 +9,13 @@
 </header>
 
 <style>
-    .navbar {
-        background-color: var(--background-secondary);
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 3;
-        padding-left: var(--file-margins);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    header {
+        position: sticky;
+        top: 0; /* 固定在顶部 */
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        z-index: 1000; /* 确保在其他内容之上 */
     }
 </style>
