@@ -3,6 +3,10 @@ img {
     margin: auto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 br {
     content: ""; /* 添加伪内容 */
     display: block;
@@ -12,6 +16,89 @@ br {
 .markdown-preview-sizer,
 .markdown-preview-section{
     padding-top: inherit;
+}
+
+/* ===== 右侧悬浮目录样式 ===== */
+.side-catalog {
+    /* 定位 */
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    /* 视觉样式 */
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.2rem;
+    width: 220px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+}
+
+.catalog-title {
+    font-family: 'LXGW WenKai';
+    color: #2c3e50;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.6rem;
+}
+
+.catalog-items a {
+    display: block;
+    color: #2980b9; /* 蓝色链接 */
+    text-decoration: none;
+    padding: 0.4rem 0;
+    font-size: 15px;
+    transition: all 0.2s;
+}
+
+.catalog-items a::before {
+    content: "";
+    color: #7f8c8d;
+}
+
+.catalog-items a:hover {
+    color: #3498db;
+    transform: translateX(4px);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .side-catalog {
+        position: static;
+        width: 100%;
+        margin-top: 2rem;
+        backdrop-filter: none;
+    }
+}
+
+.toc-title{
+    font-size: 1.2rem !important;
+    color: var(--h6-color);
+    width: fit-content;
+    padding: 3px 7px 3px 0
+}
+
+html {
+    scroll-behavior: smooth; /* 全局启用平滑滚动 */
+    scroll-timeline: auto;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* h3级目录 */
+.side-catalog a[href^="#h3-"] { /* 假设h3标题id以h3-开头 */
+    margin-left: 0;
+    padding-left: 1em;
+}
+
+/* h4级目录 */
+.side-catalog a[href^="#h4-"] { /* 假设h4标题id以h4-开头 */
+    margin-left: 1.5em;          /* 缩进量 */
+    padding-left: 1em;
+    position: relative;
 }
 
 :root {
