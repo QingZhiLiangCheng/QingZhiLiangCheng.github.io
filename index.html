@@ -1750,23 +1750,50 @@
                 content: "−"
             }
 
+            .tishi{
+                width: 10px;
+                height: 100px;
+                background-color: #0fb9b1;
+
+            }
+
             /* ===== 右侧悬浮目录样式 ===== */
             .side-catalog {
-                /* 定位 */
                 position: fixed;
-                right: 30px;
+                right: -200px; /* 初始隐藏位置 */
                 top: 50%;
                 transform: translateY(-50%);
+                width: 220px;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                opacity: 1;
+                pointer-events: none;
 
-                /* 视觉样式 */
                 background: rgba(255, 255, 255, 0.95);
                 border: 1px solid #e0e0e0;
+                border-left:3px solid #2980b9;
                 border-radius: 8px;
                 padding: 1.2rem;
-                width: 220px;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
                 backdrop-filter: blur(8px);
                 z-index: 100;
+            }
+
+            /* 右侧触发区域 */
+            .side-catalog::before {
+                content: '';
+                position: absolute;
+                left: -30px;
+                top: 0;
+                width: 30px;
+                height: 100%;
+            }
+
+            /* 悬停时显示 */
+            .side-catalog:hover,
+            .force-show {
+                right: 30px;
+                opacity: 1;
+                pointer-events: auto;
             }
 
             .catalog-title {
@@ -2212,7 +2239,31 @@
                     link.textContent = `# ${heading.textContent}`;
                     document.querySelector('.catalog-items').appendChild(link);
                 });
-            });</script>
+            });
+
+            // 动态边缘检测
+            let hideTimer;
+            const catalog = document.querySelector('.side-catalog');
+
+            document.addEventListener('mousemove', (e) => {
+                const edgeThreshold = 50; // 距离右边缘50px触发
+
+                // 计算与右边缘的距离
+                const distanceFromRight = window.innerWidth - e.clientX;
+
+                if (distanceFromRight < edgeThreshold) {
+                    catalog.classList.add('force-show');
+                    clearTimeout(hideTimer);
+                } else if (!catalog.matches(':hover')) {
+                    hideTimer = setTimeout(() => {
+                        catalog.classList.remove('force-show');
+                    }, 300);
+                }
+            });
+
+            // 防止目录内部操作时隐藏
+            catalog.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+            catalog.addEventListener('mouseleave', () => catalog.classList.remove('force-show'));</script>
     </div>
 </div>
 </body>

@@ -101,42 +101,6 @@ html {
     position: relative;
 }
 
-/* 移动端适配 */
-@media (max-width: 768px) {
-    .side-catalog {
-        position: static;
-        width: 100%;
-        margin-top: 2rem;
-        backdrop-filter: none;
-    }
-}
-
-.toc-title{
-    font-size: 1.2rem !important;
-    color: var(--h6-color);
-    width: fit-content;
-    padding: 3px 7px 3px 0
-}
-
-html {
-    scroll-behavior: smooth; /* 全局启用平滑滚动 */
-    scroll-timeline: auto;
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* h3级目录 */
-.side-catalog a[href^="#h3-"] { /* 假设h3标题id以h3-开头 */
-    margin-left: 0;
-    padding-left: 1em;
-}
-
-/* h4级目录 */
-.side-catalog a[href^="#h4-"] { /* 假设h4标题id以h4-开头 */
-    margin-left: 1.5em;          /* 缩进量 */
-    padding-left: 1em;
-    position: relative;
-}
-
 :root {
     --background-primary: rgb(32, 31, 31);
     --background-secondary: rgb(57, 56, 56);
